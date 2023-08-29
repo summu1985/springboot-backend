@@ -35,8 +35,8 @@ public class UserService {
             user.setName("Sumit");
             user.setId(i);
             user.setEmail("summukhe@redhat.com");
-            //System.out.println(user);
-            //userList.add(user);
+            System.out.println(user);
+            userList.add(user);
         }
         return userList;
     }
