@@ -4,19 +4,21 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.redhat.demo.model.User;
 
-@Component
+@Service
 public class UserService {
     public UserService() {
     }
 
     public ArrayList<User> findAll() {
-        User[] userList = new User[2];
+        //User[] userList = new User[2];
+        ArrayList<User> userList = new ArrayList<User>();
 
         // try {
         //     ObjectMapper mapper = new ObjectMapper();
@@ -33,8 +35,9 @@ public class UserService {
             user.setName("Sumit");
             user.setId(i);
             user.setEmail("summukhe@redhat.com");
-            userList[i] = user;
+            //System.out.println(user);
+            //userList.add(user);
         }
-        return new ArrayList<User>(Arrays.asList(userList));
+        return userList;
     }
 }
