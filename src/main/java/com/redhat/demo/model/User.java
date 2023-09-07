@@ -2,8 +2,16 @@ package com.redhat.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class User {
     @JsonProperty("id")
+    @Id
+  @GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
     @JsonProperty("name")
     private String name;
