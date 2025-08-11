@@ -41,7 +41,7 @@ public class UserController {
         return "Saved user id : " + n.getId();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/api/user/{id}")
     public String getUserById(@PathVariable Integer id) {
         ObjectMapper objectMapper = new ObjectMapper();
         String jsonArray;
@@ -55,7 +55,7 @@ public class UserController {
         return jsonArray;
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/api/user/{id}")
     public @ResponseBody String updateUser(@PathVariable Integer id, @RequestBody User updatedUser) {
         if (userRepository.existsById(id)) {
             updatedUser.setId(id);
@@ -64,7 +64,7 @@ public class UserController {
         return "Unable to save User with id: " + id + ". User not found!";
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/api/user/{id}")
     public @ResponseBody String deleteUser(@PathVariable Integer id) {
         if (userRepository.existsById(id)) {
             userRepository.deleteById(id);
