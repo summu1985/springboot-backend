@@ -29,15 +29,22 @@ public class UserService {
         // } catch (Exception ex) {
         //     System.out.println(ex.toString());
         // }
-        for (int i=0 ; i<2 ; i++)
-        {
+        //for (int i=0 ; i<2 ; i++)
+        //{
             User user = new User();
             user.setName("Sumit");
-            user.setId(i);
-            user.setEmail("summukhe@redhat.com");
+            user.setId(0);
+            user.setEmail("sumit@example.com");
             System.out.println(user);
             userList.add(user);
-        }
+            // Add another dummy user
+            User user = new User();
+            user.setName("Sachin");
+            user.setId(1);
+            user.setEmail("sachin@example.com");
+            System.out.println(user);
+            userList.add(user);
+        //}
         return userList;
     }
 }
