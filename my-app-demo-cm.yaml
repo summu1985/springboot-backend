@@ -4,5 +4,5 @@ metadata:
   name: my-demo-app-cm
 data:
   MYSQL_HOST: mysql
-  MYSQL_PASSWORD: debezium
+  MYSQL_PASSWORD: <todo>
   MYSQL_USER: debezium
