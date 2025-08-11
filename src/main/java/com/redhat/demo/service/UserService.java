@@ -31,19 +31,19 @@ public class UserService {
         // }
         //for (int i=0 ; i<2 ; i++)
         //{
-            User user = new User();
-            user.setName("Sumit");
-            user.setId(0);
-            user.setEmail("sumit@example.com");
-            System.out.println(user);
-            userList.add(user);
+            User user1 = new User();
+            user1.setName("Sumit");
+            user1.setId(0);
+            user1.setEmail("sumit@example.com");
+            System.out.println(user1);
+            userList.add(user1);
             // Add another dummy user
-            User user = new User();
-            user.setName("Sachin");
-            user.setId(1);
-            user.setEmail("sachin@example.com");
-            System.out.println(user);
-            userList.add(user);
+            User user2 = new User();
+            user2.setName("Sachin");
+            user2.setId(1);
+            user2.setEmail("sachin@example.com");
+            System.out.println(user2);
+            userList.add(user2);
         //}
         return userList;
     }
