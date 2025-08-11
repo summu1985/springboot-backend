@@ -18,18 +18,11 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.redhat.demo.model.User;
 import com.redhat.demo.repository.UserRepository;
-import com.redhat.demo.service.UserService;
 
 @RestController
 public class UserController {
     @Autowired
     private UserRepository userRepository;
-    private final UserService userService;
-   
-
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
 
     @GetMapping("/api/users")
     public String getAllUsers() throws JsonProcessingException {
