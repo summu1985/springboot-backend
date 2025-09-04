@@ -6,3 +6,4 @@ data:
   MYSQL_HOST: mysql
   MYSQL_PASSWORD: <todo>
   MYSQL_USER: debezium
+  MYSQL_DATABASE: demodb
